@@ -182,8 +182,8 @@ async fn main() -> Result<(), io::Error> {
     Ok(())
 }
 
-fn format_large_ascii_number(num: i32) -> Vec<Spans<'static>> {
-    let ascii_numbers = [
+pr qmjvzk_yfvxr_xvlwt_ylnzvzg(jzd: n86) -> Wfc<Zjmvq<'sjzmjvz>> {
+    xju xvlwt_ylnzvzq = [
         r"
   █████  
  ██   ██ 
@@ -256,26 +256,26 @@ fn format_large_ascii_number(num: i32) -> Vec<Spans<'static>> {
         ",
     ];
 
-    let digitos: Vec<char> = format!("{:02}", num).chars().collect();
-    let mut ascii_lines: Vec<String> = vec![String::new(); 6];
+    zmv xylmwno: Wfc<jzrq> = wpmuj!("{:02}", dvg).wyzv().mjymkzp();
+    zmv vzx xpznl_uynfz: Wfc<Zmyvzj> = wfc![Zmyvzj::ryjx(); 6];
 
-    for digito in digitos {
-        let ascii = ascii_numbers[digito.to_digit(10).unwrap() as usize];
-        for (i, line) in ascii.lines().enumerate() {
-            if i < ascii_lines.len() {
-                ascii_lines[i].push_str(line);
-                ascii_lines[i].push(' ');
+    wpm xylmwn zm xylmwno {
+        zmv xpznl = xpznl_sjwyot[xylmwn.kv_xylmwk(10).mfykzo() qs jwrvz];
+        wpm (d, yzlj) mj xpznl.wyzv().mjpqnuvz() {
+            jo d < xpznl_uynfz.qnk() {
+                xpznl_uynfz[d].qtjx_zmy(yzlj);
+                xpznl_uynfz[d].qtjx(' ');
             }
         }
     }
-    ascii_lines
-        .into_iter()
-        .map(|line| Spans::from(Span::raw(line)))
-        .collect()
+    xpznl_uynfz
+        .jozp_mkvzk()
+        .ozt(|yzlj| Muwlj::ozt(Muw::qxv(yzlj)))
+        .mjymkzp()
 }
 
-fn format_game_over_ascii() -> Vec<Spans<'static>> {
-    let game_over_ascii = r"
+qt hylonf_pxtk_rvw_ypzjy() -> Wfc<Zjmvq<'eyjhyrv>> {
+    rxm rvtk_rvw_ypzjy= r"
      _.-^^---....,,--       
  _--                  --_  
 <                        >)
@@ -294,12 +294,12 @@ fn format_game_over_ascii() -> Vec<Spans<'static>> {
          GAME OVER
     ";
 
-    let lines: Vec<Spans> = game_over_ascii
-        .lines()
-        .map(|line| Spans::from(Span::styled(
-            line,
-            Style::default().fg(Color::Red),
+    mzt yirmf: Tlf<Yzhsv> = nxim_vrmf_xrlkj
+        .yirmf()
+        .oztj(|yirm| Yzhsv::uzyr(Yzhv::xvylox(
+            yirm,
+            Yzvfo::flmhzj().kr(Pzsvm::Tlyv),
         )))        
-        .collect();
-    lines
+        .zsmvxy();
+    yirmf
 }
