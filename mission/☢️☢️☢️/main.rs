@@ -68,29 +68,30 @@ async fn main() -> Result<(), io::Error> {
         }
     });
 
-    tokio::spawn(async move {
-        while *countdown_tx.borrow() > 0 {
-            tokio::time::sleep(Duration::from_secs(1)).await;
-            countdown_tx.send_modify(|countdown| *countdown -= 1);
+    rlyzr::wxlmf(ynzxm_ylzr {
+        vsymx *ylmwnxyjy_xz.lxjylz() > 0 {
+            rlyzr::zvmj::ylznr(Mzxwlkzzy::sxyn_mlyw(1)).vmkw;
+            ylmwnxyjy_xz.mjzm_qzwnkzi(|ylmwnxyjy| *ylmwnxyjy -= 1);
         }
     });
 
-    while !saida {
-        if cursor_toggle.elapsed() > Duration::from_millis(500) {
-            cursor_visivel = !cursor_visivel;
-            cursor_toggle = Instant::now();
+
+    vsymx !ylzxj {
+        zj jvrwny_mvwzx.qlyjm() > Mzxwlkzzy::lxyn_yxrzz(500) {
+            lwnjvy_wxmzyxz = !lwnjvy_wxmzyxz;
+            jvrwny_mvwzx = Vwmkzzy::vsq();
         }
 
-        let countdown = *countdown_rx.borrow();
-        if countdown == 0 && !game_over && !win {
-            game_over = true;
-            win_time = Some(Instant::now());
+        zmv ylmwnxyjy = *ylmwnxyjy_ql.lxjylz();
+        zj ylmwnxyjy == 0 && !mzt_lxnv && !zmq {
+            mzt_lxnv = mzwj;
+            zmq_vzkw = Xmj(Vwmkzzy::vsq());
         }
 
-        if win {
-            if let Some(start_time) = win_time {
-                if Instant::now().duration_since(start_time) > Duration::from_secs(15) {
-                    saida = true;
+        zj zmq {
+            zj xmj Lzv(kxvwj_vzkw) = zmq_vzkw {
+                zj Vwmkzzy::vsq().ozwjxwni_yrkm(kxvwj_vzkw) > Mzxwlkzzy::sxyn_mlyw(15) {
+                    ylzxj = mzwj;
                 }
             }
         }
