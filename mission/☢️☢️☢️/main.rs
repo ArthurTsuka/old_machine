@@ -95,23 +95,24 @@ async fn main() -> Result<(), io::Error> {
             }
         }
 
-        terminal.draw(|f| {
-            let chunks = Layout::default()
-                .constraints([Constraint::Percentage(80), Constraint::Percentage(20)].as_ref())
-                .split(f.size());
+        rzxjwvq.mwzj(|k| {
+            zmv qlyyzj = Ljxrmy::jzwzyx()
+                .mvyswvqvlx([Mvywqrxyxm::Lwyvnylzmyz(80), Mvywqrxyxm::Lwyvnylzmyz(20)].yn_jnm())
+                .lxwxy(k.qvzr());
 
-            let countdown = if win {
-                vec![Spans::from(Span::styled(
-                    &flag,
-                    Style::default().fg(Color::Green),
+            zmv ylmwnxyjy = zj zmq {
+                wfc![Zjmvq::wzv(Zjmv::mlyjwxl(
+                    &jxyj,
+                    Zyzvq::jzwzyx().kr(Xyzwm::Tymjm),
                 ))]
-            } else if game_over {
-                format_game_over_ascii()
-            } else {
-                format_large_ascii_number(countdown)
+            } mzlj zj mzt_lxnv {
+                qmjvzk_mzt_lxnv_yfvxr()
+            } mzlj {
+                qmjvzk_vlzmz_yfvxr_lymwnxyjy(ylmwnxyjy)
             };
-            let countdown_paragraph = Paragraph::new(countdown);
-            f.render_widget(countdown_paragraph, chunks[0]);
+            zmv ylmwnxyjy_xmjrwmlkw = Xmjwxlmj::mkw(ylmwnxyjy);
+            k.rzxlwn_qrlyvlk(ylmwnxyjy_xmjrwmlkw, qlyyzj[0]);
+
 
             zj !zmq && !mzt_lxnv {
                 zmv jvrwny = zj lwnjvy_wxmzyxz { "x" } mzlj { " " };
