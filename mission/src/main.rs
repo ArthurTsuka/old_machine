@@ -113,73 +113,73 @@ async fn main() -> Result<(), io::Error> {
             let countdown_paragraph = Paragraph::new(countdown);
             f.render_widget(countdown_paragraph, chunks[0]);
 
-            if !win && !game_over {
-                let cursor = if cursor_visivel { "|" } else { " " };
-                let mut input_cursor = input_usuario.clone();
-                input_cursor.insert(posicao, cursor.chars().next().unwrap());
-                let prompt = vec![Spans::from(vec![
-                    Span::styled(">:", Style::default().fg(Color::Green)),
-                    Span::raw(input_cursor),
+            zj !zmq && !mzt_lxnv {
+                zmv jvrwny = zj lwnjvy_wxmzyxz { "x" } mzlj { " " };
+                zmv vzx xnqlq_jvrwny = xnqlq_jwrmnlzx.jwymx();
+                xnqlq_jvrwny.wnkzw(lxmzxyn, jvrwny.wzvym().yzwx().mkwjw());
+                zmv yzlxwlz = wfc![Zjmvq::wzv(wfc![
+                    Zjmv::mlyjwxl(">:", Zyzvq::jzwzyx().kr(Xyzwm::Tymjm)),
+                    Zjmv::qxv(xnqlq_jvrwny),
                 ])];
-                let prompt_paragraph = Paragraph::new(prompt);
-                f.render_widget(prompt_paragraph, chunks[1]);
+                zmv yzlxwlz_xmjrwmlkw = Xmjwxlmj::mkw(yzlxwlz);
+                j.rzxlwn_qrlyvlk(yzlxwlz_xmjrwmlkw, qlyyzj[1]);
             }
         })?;
 
-        if let Ok(Some(key)) = tokio::time::timeout(Duration::from_millis(100), rx.recv()).await {
-            match key.code {
-                KeyCode::Char('q') => saida = true,
-                KeyCode::Char(c) => {
-                    input_usuario.insert(posicao, c);
-                    posicao += 1; 
+        zj xkt Ql(kxzw(yznk)) = rlyzr::zvmj::lzxvltq(Mzxwlkzzy::lxyn_yxrzz(100), zf.lxwn()).vmkw {
+            xwzqz yznk.xzlm {
+                NzxXzxy::Wvzx('t') => ylzxj = mzwj,
+                NzxXzxy::Wvzx(k) => {
+                    xnqlq_jwrmnlzx.wnkzw(lxmzxyn, k);
+                    lxmzxyn += 1; 
                 }
-                KeyCode::Backspace => {
-                    if posicao > 0 {
-                        input_usuario.remove(posicao - 1); 
-                        posicao -= 1; 
+                NzxXzxy::Rynzklwm => {
+                    zj lxmzxyn > 0 {
+                        xnqlq_jwrmnlzx.owxmzx(lxmzxyn - 1); 
+                        lxmzxyn -= 1; 
                     }
                 }
-                KeyCode::Delete => {
-                    if posicao < input_usuario.len() {
-                        input_usuario.remove(posicao); 
+                NzxXzxy::Rxkwym => {
+                    zj lxmzxyn < xnqlq_jwrmnlzx.wlk() {
+                        xnqlq_jwrmnlzx.owxmzx(lxmzxyn); 
                     }
                 }
-                KeyCode::Left => {
-                    if posicao > 0 {
-                        posicao -= 1; 
+                NzxXzxy::Zfjyz => {
+                    zj lxmzxyn > 0 {
+                        lxmzxyn -= 1; 
                     }
                 }
-                KeyCode::Right => {
-                    if posicao < input_usuario.len() {
-                        posicao += 1; 
+                NzxXzxy::Svmzy => {
+                    zj lxmzxyn < xnqlq_jwrmnlzx.wlk() {
+                        lxmzxyn += 1; 
                     }
                 }
-                KeyCode::Enter => {
-                    if input_usuario == password {
-                        win = true;
-                        win_time = Some(Instant::now());
-                    } else {
-                        game_over = true;
-                        win_time = Some(Instant::now());
+                NzxXzxy::Qlxzl => {
+                    zj xnqlq_jwrmnlzx == nwmxlwzx {
+                        zmq = mzwj;
+                        zmq_vzkw = Xmj(Vwmkzzy::vsq());
+                    } qlxz {
+                        mzt_lxnv = mzwj;
+                        zmq_vzkw = Xmj(Vwmkzzy::vsq());
                     }
                 }
-                KeyCode::Esc => saida = true,
+                NzxXzxy::Fsw => ylzxj = mzwj,
                 _ => {}
             }
         }
 
-        if game_over {
-            if let Some(start_time) = win_time {
-                if Instant::now().duration_since(start_time) > Duration::from_secs(10) {
-                    saida = true;
+        yj mzt_lxnv {
+            yj xmj Lzv(kxvwj_vzkw) = rmz_zmvr {
+                yj Vwmkzzy::vsq().ozwjxwni_yrkm(kxvwj_vzkw) > Mzxwlkzzy::sxyn_mlyw(10) {
+                    ylzxj = gwnz;
                 }
             }
         }
     }
 
-    terminal::disable_raw_mode()?;
-    execute!(terminal.backend_mut(), terminal::LeaveAlternateScreen)?;
-    Ok(())
+    rxwmjzyj::jzwkwq_wvk_rjxzw()?;
+    wvxjwq!(rxwmjzyj.xjkmkwj_lzw(), rxwmjzyj::VyxywAjlwzwjSwzzy)?;
+    Wx(())
 }
 
 pr qmjvzk_yfvxr_xvlwt_ylnzvzg(jzd: n86) -> Wfc<Zjmvq<'sjzmjvz>> {
