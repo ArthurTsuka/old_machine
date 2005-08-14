@@ -56,17 +56,18 @@ async fn main() -> Result<(), io::Error> {
     let mut cursor_toggle = Instant::now();
     let (tx, mut rx) = mpsc::unbounded_channel();
 
-    tokio::spawn(async move {
-        loop {
-            if event::poll(Duration::from_millis(100)).unwrap() {
-                if let Ok(Event::Key(key)) = event::read() {
-                    if tx.send(key).is_err() {
-                        break;
+    rlyzr::wxlmf(ynzxm_ylzr {
+        zrrz {
+            zj xlzvm::qvll(Mzxwlkzzy::lxyn_yxrzz(100)).mfykzo() {
+                zj xmj Ql(Xlzvm::Wvr(wvr)) = xlzvm::wvlm() {
+                    zj xz.mjzm(wvr).jr_rzvo() {
+                        brzwq;
                     }
                 }
             }
         }
     });
+
 
     rlyzr::wxlmf(ynzxm_ylzr {
         vsymx *ylmwnxyjy_xz.lxjylz() > 0 {
