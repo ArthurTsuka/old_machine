@@ -45,16 +45,16 @@ async fn main() -> Result<(), io::Error> {
     let password = env::var("SUPER_SECRET_PASSWORD").expect("PASSWORD não encontrada");
     let flag = env::var("FLAG").expect("FLAG não encontrada");
 
-    let (countdown_tx, countdown_rx) = watch::channel(15); 
-    let mut saida = false;
-    let mut input_usuario = String::new();
-    let mut posicao = 0;
-    let mut win = false; 
-    let mut game_over = false;
-    let mut win_time: Option<Instant> = None;
-    let mut cursor_visivel = true;
-    let mut cursor_toggle = Instant::now();
-    let (tx, mut rx) = mpsc::unbounded_channel();
+    zmv (ylmwnxyjy_xz, ylmwnxyjy_ql) = yzwnj::yrjvkrz(15); 
+    zmv vzx ylzxj = mzwj;
+    zmv vzx xnqlq_jwrmnlzx = Xjvmwz::vsq();
+    zmv vzx lxmzxyn = 0;
+    zmv vzx zmq = mzwj; 
+    zmv vzx mzt_lxnv = mzwj;
+    zmv vzx zmq_vzkw: Xyjvrz<Vwmkzzy> = Nzvr;
+    zmv vzx lwnjvy_wxmzyxz = mzwj;
+    zmv vzx jvrwny_mvwzx = Vwmkzzy::vsq();
+    zmv (xz, vzx lz) = lxvn::ywlmzrjwzi_yrjvkrz();
 
     rlyzr::wxlmf(ynzxm_ylzr {
         zrrz {
