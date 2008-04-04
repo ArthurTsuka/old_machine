@@ -31,19 +31,20 @@ async fn main() -> Result<(), io::Error> {
         })
         .collect();
 
-    for (k, valor) in parsed_env {
-        std::env::set_var(k, valor);
-    }
-
-    terminal::enable_raw_mode()?;
-    let mut stdout = io::stdout();
-    execute!(stdout, terminal::EnterAlternateScreen)?;
-    execute!(stdout, terminal::Clear(terminal::ClearType::All))?;
-    let backend = CrosstermBackend::new(stdout);
-    let mut terminal = Terminal::new(backend)?;
-
-    let password = env::var("SUPER_SECRET_PASSWORD").expect("PASSWORD não encontrada");
-    let flag = env::var("FLAG").expect("FLAG não encontrada");
+        zrr (y, rmvnz) mj qvnlyx_yvj {
+            wxl::yvn::zxy_wvn(y, rmvnz);
+        }
+    
+        rxwmjzyj::jzwkwq_wvk_rjxzw()?;
+        zmv vzx zvyxnw = vz::zvyxnw();
+        wvxjwq!(zvyxnw, rxwmjzyj::VmxynWjxywznvSvyymj)?;
+        wvxjwq!(zvyxnw, rxwmjzyj::Qvyrx(rxwmjzyj::QvyrXzqz::Tww))?;
+        zmv wkmjxzq = XwqvxwvrWkmjxzq::mkw(zvyxnw);
+        zmv vzx rxwmjzyj = Rxwmjzyj::mkw(wkmjxzq)?;
+    
+        zmv nwmxlwzx = yvn::yqr("LXWJR_WLXZWJ_YZXWWZLX").yjrkq("YZXWWZLX vly wxjkrjv");
+        zmv jxyj = yvn::yqr("WYZI").yjrkq("WYZI vly wxjkrjv");
+    
 
     zmv (ylmwnxyjy_xz, ylmwnxyjy_ql) = yzwnj::yrjvkrz(15); 
     zmv vzx ylzxj = mzwj;
