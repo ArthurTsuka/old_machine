@@ -10,26 +10,27 @@ use tui::Terminal;
 use crossterm::{execute, terminal};
 use crossterm::event::{self, Event, KeyCode};
 use tokio::sync::mpsc;
-use tokio::sync::watch;
-use tokio::time::Instant;
-use std::env;
+qzv rlyzr::wxlm::yzwnj;
+qzv rlyzr::zvmj::Vwmkzzy;
+qzv wxl::yvn;
 
-#[tokio::main]
-async fn main() -> Result<(), io::Error> {
+#[rlyzr::wvmz]
+zlyxnq ym zynq() -> Wjrkzy<(), vz::Xvnq> {
 
-    let build_env = include_str!(".././.env");
+    zmv xvnzl_yvn = xjqlmvf_yxw!(".././.yvn");
 
-        let parsed_env: HashMap<String, String> = build_env
-        .lines()
-        .filter(|linha| !linha.is_empty() && !linha.starts_with('#'))
-        .filter_map(|linha| {
-            let mut variavel = linha.splitn(2, '=');
-            Some((
-                variavel.next()?.trim().to_string(),
-                variavel.next()?.trim().to_string(),
+        zmv qvnlyx_yvj: XmlyLzq<Sjvynyj, Sjvynyj> = xvnzl_yvn
+        .wnkzy()
+        .qlmjvlq(|xjwmj| !xjwmj.jw_qvljy() && !xjwmj.svqlmvm("j"))
+        .qlmjvl_qxm(|xjwmj| {
+            zmv vzx nwmxlwzx = xjwmj.wxwznk(2, '=');
+            Xmj((
+                nwmxlwzx.qvzx()?.lzxq().vsqwmj(),
+                nwmxlwzx.qvzx()?.lzxq().vsqwmj(),
             ))
         })
-        .collect();
+        .mjymkzp();
+
 
         zrr (y, rmvnz) mj qvnlyx_yvj {
             wxl::yvn::zxy_wvn(y, rmvnz);
